@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x8i-BU-5bQ">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ScannerVC-->
+        <scene sceneID="KXv-Yz-mLY">
+            <objects>
+                <viewController id="x8i-BU-5bQ" customClass="ScannerVC" customModule="TestScanningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpr-nK-UV1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iI-bs-DgL">
+                                <rect key="frame" x="176" y="64" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEN-ff-9SR">
+                                <rect key="frame" x="20" y="143" width="374" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="xkR-t8-8s0"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWi-Oa-J74">
+                                <rect key="frame" x="355" y="351" width="39" height="30"/>
+                                <state key="normal" title="STOP"/>
+                                <connections>
+                                    <action selector="stopScanner:" destination="x8i-BU-5bQ" eventType="touchUpInside" id="0L6-xF-xxz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsz-I8-qXE">
+                                <rect key="frame" x="20" y="351" width="47" height="30"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startScanner:" destination="x8i-BU-5bQ" eventType="touchUpInside" id="T5j-aJ-Mn5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynF-w3-lvq">
+                                <rect key="frame" x="20" y="389" width="174" height="30"/>
+                                <state key="normal" title="Start BAR code detection"/>
+                                <connections>
+                                    <action selector="startBarCodeDeteection:" destination="x8i-BU-5bQ" eventType="touchUpInside" id="0Lj-uZ-o9u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncg-eJ-FeX">
+                                <rect key="frame" x="20" y="427" width="173" height="30"/>
+                                <state key="normal" title="Stop BAR code detection"/>
+                                <connections>
+                                    <action selector="stopBarCodeDetection:" destination="x8i-BU-5bQ" eventType="touchUpInside" id="2dt-nu-HaY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ncg-eJ-FeX" firstAttribute="leading" secondItem="ynF-w3-lvq" secondAttribute="leading" id="1hz-uR-W6C"/>
+                            <constraint firstItem="ynF-w3-lvq" firstAttribute="leading" secondItem="Apy-Y7-h5k" secondAttribute="leading" constant="20" id="2TN-Jp-iEy"/>
+                            <constraint firstItem="fsz-I8-qXE" firstAttribute="leading" secondItem="Apy-Y7-h5k" secondAttribute="leading" constant="20" id="5LJ-J5-37H"/>
+                            <constraint firstItem="8iI-bs-DgL" firstAttribute="centerX" secondItem="Apy-Y7-h5k" secondAttribute="centerX" id="5un-FA-BfQ"/>
+                            <constraint firstItem="fsz-I8-qXE" firstAttribute="top" secondItem="AEN-ff-9SR" secondAttribute="bottom" constant="8" id="Eiz-Kq-t3K"/>
+                            <constraint firstItem="Ncg-eJ-FeX" firstAttribute="top" secondItem="ynF-w3-lvq" secondAttribute="bottom" constant="8" id="I13-gf-KXo"/>
+                            <constraint firstItem="AEN-ff-9SR" firstAttribute="leading" secondItem="Apy-Y7-h5k" secondAttribute="leading" constant="20" id="P2P-wb-occ"/>
+                            <constraint firstItem="Apy-Y7-h5k" firstAttribute="trailing" secondItem="AEN-ff-9SR" secondAttribute="trailing" constant="20" id="RvG-ya-eE9"/>
+                            <constraint firstItem="ynF-w3-lvq" firstAttribute="top" secondItem="fsz-I8-qXE" secondAttribute="bottom" constant="8" id="bBg-ld-LIX"/>
+                            <constraint firstItem="8iI-bs-DgL" firstAttribute="top" secondItem="Apy-Y7-h5k" secondAttribute="top" constant="20" id="dxV-Tm-KIy"/>
+                            <constraint firstItem="Apy-Y7-h5k" firstAttribute="trailing" secondItem="EWi-Oa-J74" secondAttribute="trailing" constant="20" id="gtT-vc-y9s"/>
+                            <constraint firstItem="EWi-Oa-J74" firstAttribute="top" secondItem="AEN-ff-9SR" secondAttribute="bottom" constant="8" id="m6W-sV-ckY"/>
+                            <constraint firstItem="AEN-ff-9SR" firstAttribute="top" secondItem="8iI-bs-DgL" secondAttribute="bottom" constant="58" id="qf1-ld-HVD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Apy-Y7-h5k"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLbl" destination="8iI-bs-DgL" id="aLQ-IT-Ief"/>
+                        <outlet property="videoLayer" destination="AEN-ff-9SR" id="ms0-Vd-LVQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0rG-7Q-WWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="15.401785714285714"/>
+        </scene>
+    </scenes>
+</document>
